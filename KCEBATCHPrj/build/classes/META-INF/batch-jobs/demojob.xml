@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<job xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/jobXML_1_0.xsd" id="demojob" restartable="false" version="1.0">
+	<step id="idvalue0">
+		<chunk>
+			<reader ref="demo.DemoReader">
+				<properties >
+					<property name="inputFile" value="/Users/kc13666/wlp/temp/input.TXT"/>
+				</properties>
+			</reader>
+			<processor ref="demo.DemoProcessor" />
+			<writer ref="demo.DemoWriter">
+				<properties >
+					<property name="outputFile" value="/Users/kc13666/wlp/temp/output.txt"/>
+				</properties>
+			</writer>
+		</chunk>
+	</step>
+</job>
